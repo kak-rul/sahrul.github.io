@@ -35,11 +35,16 @@
 }
 
 .card:nth-child(2) {
-    display: flex;
-    justify-content: space-evenly;
+    // display: flex;
+    // justify-content: space-evenly;
     position: relative;
-    padding: 4rem 0;
+    padding: 2rem 0;
     margin-top: 1.7rem;
+}
+
+/* prevent buttons from visually overflowing the card area */
+.card:nth-child(2) {
+    overflow: hidden;
 }
 
 .card>button {
@@ -89,27 +94,34 @@
     -o-transform: scale(0.8);
 }
 
-@media screen and (max-width:425px) {
+@media screen and (max-width:430px) {
+    .container{
+        width: 100%;
+    }
+
     .wrapper {
+        margin: 1rem;
         padding: 2rem 1rem;
+        width: 100%;
     }
 
     .card:nth-child(2) {
-        flex-direction: column;
-        padding: 2rem 0;
         margin-top: 1rem;
         align-items: center;
     }
 
+    .judul {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
     .btn-iya {
         position: relative;
-        left: 0;
-        margin-bottom: 1rem;
+        left: 4rem;
     }
 
     .btn-gak {
-        position: relative;
-        left: 0;
+        left: 12rem;
     }
     
 }
