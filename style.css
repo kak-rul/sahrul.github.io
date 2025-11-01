@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ffffff;
+    height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    border-radius: 9px;
+    padding: 4rem 2rem;
+    /* From https://css.glass */
+    background: rgba(118, 118, 118, 0.39);
+    border-radius: 16px;
+    box-shadow: 0 7px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.4px);
+    -webkit-backdrop-filter: blur(3.4px);
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    -ms-border-radius: 9px;
+    -o-border-radius: 9px;
+}
+
+.judul {
+    color: #000;
+    font-size: 1.6rem;
+    font-family: poppins, serif;
+    font-weight: 400;
+}
+
+.card:nth-child(2) {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    padding: 4rem 0;
+    margin-top: 1.7rem;
+}
+
+.card>button {
+    color: #fff;
+    padding: 0.5rem 3rem;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.btn-iya {
+    position: absolute;
+    left: 5rem;
+    background-color: rgb(3, 194, 58);
+}
+
+.btn-gak {
+    position: absolute;
+    left: 14rem;
+    background-color: rgb(152, 6, 6);
+}
+
+.btn-iya:hover {
+    background-color: rgb(16, 253, 84);
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transition: 200ms ease-in-out all;
+    -webkit-transition: 200ms ease-in-out all;
+    -moz-transition: 200ms ease-in-out all;
+    -ms-transition: 200ms ease-in-out all;
+    -o-transition: 200ms ease-in-out all;
+}
+
+.btn-gak:hover {
+    background-color: rgb(248, 0, 0);
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+}
+
+@media screen and (max-width:425px) {
+    .wrapper {
+        padding: 2rem 1rem;
+    }
+
+    .card:nth-child(2) {
+        flex-direction: column;
+        padding: 2rem 0;
+        margin-top: 1rem;
+        align-items: center;
+    }
+
+    .btn-iya {
+        position: relative;
+        left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .btn-gak {
+        position: relative;
+        left: 0;
+    }
+    
+}
