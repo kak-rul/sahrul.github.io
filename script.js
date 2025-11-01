@@ -9,13 +9,13 @@ if (buttonNo) {
     const mq = window.matchMedia('(max-width:430px)');
 
     const moveButtonInsideParent = () => {
-        const parent = button.parentElement;
+        const parent = buttonNo.parentElement;
         if (!parent) return;
 
         const parentWidth = parent.clientWidth;
         const parentHeight = parent.clientHeight;
-        const btnWidth = button.offsetWidth;
-        const btnHeight = button.offsetHeight;
+        const btnWidth = buttonNo.offsetWidth;
+        const btnHeight = buttonNo.offsetHeight;
 
         const maxLeft = Math.max(0, parentWidth - btnWidth);
         const maxTop = Math.max(0, parentHeight - btnHeight);
@@ -33,21 +33,21 @@ if (buttonNo) {
     };
 
     const resizeHandler = () => {
-        const parent = button.parentElement;
+        const parent = buttonNo.parentElement;
         if (!parent) return;
         const parentWidth = parent.clientWidth;
         const parentHeight = parent.clientHeight;
         const btnWidth = buttonNo.offsetWidth;
         const btnHeight = buttonNo.offsetHeight;
 
-        const currentLeft = parseInt(button.style.left || '0', 10);
-        const currentTop = parseInt(button.style.top || '0', 10);
+        const currentLeft = parseInt(buttonNo.style.left || '0', 10);
+        const currentTop = parseInt(buttonNo.style.top || '0', 10);
 
         const maxLeft = Math.max(0, parentWidth - btnWidth);
         const maxTop = Math.max(0, parentHeight - btnHeight);
 
-        if (currentLeft > maxLeft) button.style.left = `${maxLeft}px`;
-        if (currentTop > maxTop) button.style.top = `${maxTop}px`;
+        if (currentLeft > maxLeft) buttonNo.style.left = `${maxLeft}px`;
+        if (currentTop > maxTop) buttonNo.style.top = `${maxTop}px`;
     };
 
     function attachMovement() {
